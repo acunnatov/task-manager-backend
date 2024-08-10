@@ -4,18 +4,15 @@ import Todo from "../model/todoModel.js";
 export const getTodos = async (req, res) => {
     try {
         const todos = await Todo.find();
-<<<<<<< HEAD
-        res.json(todos);
-=======
         res.status(200).json({
             status: 200,
             todos
         });
->>>>>>> fd8063a (changes commit)
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 };
+
 
 // Add a new todo
 export const addTodo = async (req, res) => {
